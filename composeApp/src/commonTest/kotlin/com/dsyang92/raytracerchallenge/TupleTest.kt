@@ -10,10 +10,10 @@ class TupleTest {
     @Test
     fun `a tuple with w as 1 is a point`() {
         val a = Tuple(4.3, -4.2, 3.1, 1.0)
-        assertEquals(a.x, 4.3)
-        assertEquals(a.y, -4.2)
-        assertEquals(a.z, 3.1)
-        assertEquals(a.w, 1.0)
+        assertTrue(a.x eq 4.3)
+        assertTrue(a.y eq -4.2)
+        assertTrue(a.z eq 3.1)
+        assertTrue(a.w eq 1.0)
         assertTrue(a.isPoint())
         assertFalse(a.isVector())
     }
@@ -21,10 +21,10 @@ class TupleTest {
     @Test
     fun `a tuple with w as 0 is a vector`() {
         val a = Tuple(4.3, -4.2, 3.1, 0.0)
-        assertEquals(a.x, 4.3)
-        assertEquals(a.y, -4.2)
-        assertEquals(a.z, 3.1)
-        assertEquals(a.w, 0.0)
+        assertTrue(a.x eq 4.3)
+        assertTrue(a.y eq -4.2)
+        assertTrue(a.z eq 3.1)
+        assertTrue(a.w eq 0.0)
         assertTrue(a.isVector())
         assertFalse(a.isPoint())
     }
