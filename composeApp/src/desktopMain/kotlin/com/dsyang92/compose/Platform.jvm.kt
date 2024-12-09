@@ -1,4 +1,4 @@
-package com.dsyang92.raytracerchallenge
+package com.dsyang92.compose
 
 class JVMPlatform: Platform {
     override val name: String = "Java ${System.getProperty("java.version")}"

@@ -1,4 +1,4 @@
-package com.dsyang92.raytracerchallenge
+package com.dsyang92.compose
 
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application

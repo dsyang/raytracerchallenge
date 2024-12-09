@@ -1,4 +1,4 @@
-package com.dsyang92.raytracerchallenge
+package com.dsyang92.compose
 
 interface Platform {
     val name: String
