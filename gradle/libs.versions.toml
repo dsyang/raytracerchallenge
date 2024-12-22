@@ -16,6 +16,7 @@ junit = "4.13.2"
 kotlin = "2.0.21"
 kotlinx-coroutines = "1.9.0"
 imgui = "1.87.6"
+openrndr = "0.4.4"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -31,7 +32,10 @@ androidx-activity-compose = { module = "androidx.activity:activity-compose", ver
 androidx-lifecycle-viewmodel = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "androidx-lifecycle" }
 androidx-lifecycle-runtime-compose = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
 kotlinx-coroutines-swing = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-swing", version.ref = "kotlinx-coroutines" }
-imgui = { module = "io.github.spair:imgui-java-app", version.ref = "imgui"}
+imgui = { module = "io.github.spair:imgui-java-app", version.ref = "imgui" }
+openrndr-application = { module = "org.openrndr:openrndr-application", version.ref = "openrndr" }
+openrndr-gl3 = { module = "org.openrndr:openrndr-gl3", version.ref = "openrndr" }
+openrndr-gl3-native = { module = "org.openrndr:openrndr-gl3-natives-windows", version.ref = "openrndr" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
