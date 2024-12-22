@@ -2,6 +2,8 @@ package com.dsyang92.raytracerchallenge
 
 import kotlin.math.sqrt
 
+expect fun Double.format(): String
+
 data class Tuple(
     val x: Double,
     val y: Double,
@@ -11,6 +13,10 @@ data class Tuple(
     companion object {
         fun p(x: Double, y: Double, z: Double) = Tuple(x, y, z, 1.0)
         fun v(x: Double, y: Double, z: Double) = Tuple(x, y, z, 0.0)
+    }
+
+    override fun toString(): String {
+        return "{ x=${x.format()}, y=${y.format()}, z=${z.format()}, w=${w.format()}"
     }
 }
 

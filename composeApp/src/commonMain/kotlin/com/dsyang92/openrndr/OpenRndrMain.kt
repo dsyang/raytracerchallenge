@@ -4,6 +4,7 @@ import org.openrndr.color.ColorRGBa
 import com.dsyang92.raytracerchallenge.Tuple
 import com.dsyang92.raytracerchallenge.Vector
 import com.dsyang92.raytracerchallenge.norm
+import com.dsyang92.raytracerchallenge.plus
 import com.dsyang92.raytracerchallenge.point
 import com.dsyang92.raytracerchallenge.vector
 
@@ -19,7 +20,9 @@ data class Environment(
 )
 
 fun tick(p: Projectile, e: Environment): Projectile {
-    return p
+    val newPos = p.position + p.velocity
+    val newV = p.velocity + e.gravity + e.wind
+    return Projectile(newPos, newV)
 }
 
 fun main() = application {
