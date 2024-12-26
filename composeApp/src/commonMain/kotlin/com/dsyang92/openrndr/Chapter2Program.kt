@@ -1,11 +1,7 @@
 package com.dsyang92.openrndr
 
-import HEIGHT
-import WIDTH
 import com.dsyang92.raytracerchallenge.Point
 import com.dsyang92.raytracerchallenge.Tuple
-import com.dsyang92.raytracerchallenge.Vector
-import com.dsyang92.raytracerchallenge.plus
 import com.dsyang92.raytracerchallenge.point
 import com.dsyang92.raytracerchallenge.times
 import com.dsyang92.raytracerchallenge.vector
@@ -16,28 +12,12 @@ import org.openrndr.math.Vector2
 import org.openrndr.shape.Circle
 import org.openrndr.shape.LineSegment
 
-data class Projectile(
-    val position: Point,
-    val velocity: Vector,
-)
-
-data class Environment(
-    val gravity: Vector,
-    val wind: Vector,
-)
-
-fun tick(p: Projectile, e: Environment): Projectile {
-    val newPos = p.position + p.velocity
-    val newV = p.velocity + e.gravity + e.wind
-    return Projectile(newPos, newV)
+fun chapter2Config(config: Configuration) = config.run {
+    width = 900
+    height = 550
 }
 
-fun chapter1Config(config: Configuration) = config.run {
-    width = WIDTH
-    height = HEIGHT
-}
-
-fun chapter1(program: Program) = program.run {
+fun chapter2(program: Program) = program.run {
 
     val scale = 15.0
     val origin = Tuple.p(width/2.0, height/2.0, 0.0)
